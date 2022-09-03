@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Timer</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <header>
+        <p class="brand">Pomodoro Timer</p>
+
+
+        <div class="menu">
+            <nav>
+                <ul>
+                    <li><a href="javascript:void(0);" class="setting_btn">Settings</a></li>
+                    <li><a href="javascript:void(0);" class="about_btn">About</a></li>
+                </ul>
+            </nav>
+            <div class="switch">
+                
+                <input type="checkbox" id="dark_mode_btn"  />
+                <label class="toggle" for="dark_mode_btn"></label>
+                
+            </div>
+        </div>
+    </header>
+    <div class="container">
+
+        <div class="sub-container">
+            <div class="modes">
+                <button id="mode_0">Pomodoro</button>
+                <button id="mode_1">Short Break</button>
+                <button id="mode_2">Long Break</button>
+    
+            </div>
+            <div class="pomodoro">
+                <div class="timer">
+                    00:00
+                </div>
+            </div>
+    
+            <div class="controls">
+                <button id="start">Start</button>
+                <button id="stop">Stop</button>
+                <button id="reset">Reset</button>
+            </div>
+        </div>
+        
+
+
+        <div class="setting">
+            <div>
+                <label for="pomodoro_txt">Pomodoro</label>
+                <input type="number" min="1" max="60"  name="pomodoro_txt" id="pomodoro_txt" placeholder="1-60 mins"  />
+            </div>
+            <div>
+                <label>Short Break</label>
+                <input type="number" min="1" max="60" name="short_br_txt" id="short_br_txt" placeholder="1-60 mins" />
+                
+            </div>
+            <div>
+                <label>Long Break</label>
+                <input type="number" min="1" max="60" name="long_br_txt" id="long_br_txt" placeholder="1-60 mins" />
+            </div>
+           
+           
+            
+            
+            <button class="save">Save</button>
+
+            <p>x</p>
+        </div>
+
+        <div class="about">
+            <h3>The Pomodoro Technique</h3>
+            <h5>Beat procrastination and improve your focus one pomodoro at a time</h5>
+            <p>The secret to effective time management is...thinking in tomatoes rather than 
+                hours? It may seem silly at first, but millions of people swear by the 
+                life-changing power to the Pomodoro Technique. 
+                (Pomodoro is Italian for tomato. 🍅)
+
+                This popular time management method asks you to alternate pomodoros — 
+                focused work sessions — with frequent short breaks to promote sustained concentration and stave off mental fatigue.</p>
+            
+            <span>x</span>
+        </div>
+
+        <audio  id="sound">
+            <source src="./assets/Stopwatch-sound.mp3" type="audio/mp3"></source>
+        </audio>
+
+    </div>
+
+<script src="main.js"></script>
+</body>
+</html>

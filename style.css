@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+:root {
+    --bg: #D4F6CC;
+    --text-clr: #3D3C42;
+    --bg-primary: #C1EFFF;
+    --dark: #C98474;
+    --light: #;
+    --btn-bg: #76BA99;
+    --border-rad: 5px;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.darkmode {
+    
+    --bg: #3D3C42;
+    --text-clr: #D4F6CC;
+    --btn-bg: #42855B;
+    /* --btn-bg: #EE6983; */
+    --bg-primary: #E1FFEE;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-primary);
+    width: 100%;
+    height: 100vh;
+    font-size:1rem;
+    font-family:'Ubuntu',sans-serif;
+
+
+}
+
+
+.container {
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+header {
+    width: 100%;
+    height: 100px;
+    background-color: var(--bg);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    top:0;
+    left:0;
+    border-bottom: 0.5px solid var(--text-clr);
+}
+header p {
+    color: var(--text-clr);
+    font-weight: 800;
+    font-size: 1.5rem;
+}
+header nav ul li a {
+    text-decoration: none;
+    color: var(--text-clr);
+    font-size: 1.1rem;
+
+}
+header nav ul li {
+    display: inline;
+    padding: 0.8em;
+    transition: all 0.3s ease;
+}
+header nav ul li:hover {
+    font-weight: 700;
+}
+.menu {
+    display: flex;
+    flex-direction:row ;
+}
+
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.sub-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 0.5px solid black;
+    padding: 1.3em;
+    border-radius: var(--border-rad);
+    position: relative;
+
+    background-color: var(--bg);
+
+}
+.pomodoro {
+    padding: 0.5em;
+}
+.pomodoro .timer {
+    font-weight: 700;
+    font-size: 3.4rem;
+    letter-spacing: 0.5rem;
+    color: var(--text-clr);
+}
+.setting {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    top: -100%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: 0.5px solid black;
+    background-color: var(--bg);
+    height: 50%;
+    width: 35%;
+    border-radius: var(--border-rad);
+    font-size: 1.2rem;
+    color: var(--text-clr);
+    transition: all 0.4s ease;
+
+
+}
+.setting div label {
+    margin-top:0.3em;
+}
+.setting div input[type="number"] {
+    outline:none;
+    border: 0.5px solid var(--text-clr);
+    padding: 0.5em;
+    width: 110%;
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 0.3em;
+    border-radius: var(--border-rad);
+
+}
+.setting div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+}
+
+.setting p {
+    color: var(--text-clr);
+    padding: 0.3em;
+    position: absolute;
+    top:0;
+    left:90%;
+    cursor: pointer;
+}
+button {
+    
+    outline: none;
+    border: none;
+    background-color: var(--btn-bg);
+    font-size: 1.3rem;
+    border-radius: var(--border-rad);
+    padding: 0.7rem;
+    color: var(--text-clr);
+    margin: 0.3em;
+    cursor: pointer;
+}
+.switch {
+    display: flex;
+    flex-direction: row;
+}
+#dark_mode_btn {
+    visibility: hidden;
+}
+
+.toggle {
+    display: block;
+    cursor: pointer;
+    background-color: var(--text-clr);
+   
+    width: 50px;
+    height: 20px;
+    border-radius: 10px;
+    position: relative;
+
+
+}
+.toggle::after {
+
+    content: '';
+    background-color: var(--dark);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    transition: all 0.4s ease;
+
+}
+
+#dark_mode_btn:checked + label::after{
+    left: 60%;
+}
+
+.active {
+    background-color: #EE6983;
+}
+
+.about {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg);
+    color: var(--text-clr);
+    padding: 1em;
+    border-radius: var(--border-rad);
+    border: 0.5px solid var(--text-clr);
+    width: 30%;
+    height: 50%;
+    transition: all 0.4s ease;
+    position: absolute;
+    top: -100%;
+    left: 35%;
+
+}
+.about h3 {
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+.about h5 {
+    padding: 0.2em;
+    text-align: center;
+}
+.about p {
+   padding: 0.2em;
+    letter-spacing: 1px;
+}
+.about span {
+    position: absolute;
+    font-size: 1.3rem;
+    top: 0;
+    right: 0;
+    padding: 0.5em;
+    cursor: pointer;
+}
